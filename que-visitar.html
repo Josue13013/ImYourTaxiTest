@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Qué visitar en Buenos Aires - Recomendaciones gastronómicas de SoyTuTaxi. Los mejores restaurantes de CABA.">
+    <title>Qué Visitar - SoyTuTaxi Buenos Aires</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav nav--light">
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">soytutaxi.com</a>
+
+            <ul class="nav__menu">
+                <li><a href="index.html" class="nav__link" data-i18n="nav_welcome">Bienvenido</a></li>
+                <li><a href="vehiculos.html" class="nav__link" data-i18n="nav_vehicles">Vehículos</a></li>
+                <li><a href="contacto.html" class="nav__link" data-i18n="nav_contact">Contacto</a></li>
+                <li><a href="que-visitar.html" class="nav__link active" data-i18n="nav_visit">Qué Visitar</a></li>
+            </ul>
+
+            <div class="lang-selector">
+                <button class="lang-selector__btn">
+                    <span class="lang-selector__current">Español</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </button>
+                <div class="lang-selector__dropdown">
+                    <button class="lang-selector__option active" data-lang="es">Español</button>
+                    <button class="lang-selector__option" data-lang="en">English</button>
+                    <button class="lang-selector__option" data-lang="zh">中文</button>
+                </div>
+            </div>
+
+            <button class="nav__toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Spacer for fixed nav -->
+    <div style="height: 80px;"></div>
+
+    <!-- Recommendations Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-header__subtitle" data-i18n="visit_subtitle">Recomendaciones</p>
+                <h1 class="section-header__title" data-i18n="visit_title">Nuestras Recomendaciones Gastronómicas en CABA
+                </h1>
+            </div>
+
+            <!-- Recommendation 1 -->
+            <div class="recommendation-card">
+                <div class="recommendation-card__image">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="La Carniceria">
+                </div>
+                <div class="recommendation-card__content">
+                    <h3 class="recommendation-card__title">LA CARNICERIA</h3>
+                    <p class="recommendation-card__description">Parrilla y ahumados 🔥</p>
+                    <a href="https://www.lacarniceria.com.ar" class="recommendation-card__link"
+                        target="_blank">www.lacarniceria.com.ar</a>
+                </div>
+            </div>
+
+            <!-- Recommendation 2 -->
+            <div class="recommendation-card">
+                <div class="recommendation-card__image">
+                    <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=600&q=80"
+                        alt="El Club de la Milanesa">
+                </div>
+                <div class="recommendation-card__content">
+                    <h3 class="recommendation-card__title">EL CLUB DE LA MILANESA</h3>
+                    <p class="recommendation-card__description">Recomendamos visitar la sucursal de Recoleta Azcuénaga
+                        1898, CABA.</p>
+                    <a href="https://www.elclubdelamilanesa.com" class="recommendation-card__link"
+                        target="_blank">www.elclubdelamilanesa.com</a>
+                </div>
+            </div>
+
+            <!-- Recommendation 3 -->
+            <div class="recommendation-card">
+                <div class="recommendation-card__image">
+                    <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80" alt="Don Julio">
+                </div>
+                <div class="recommendation-card__content">
+                    <h3 class="recommendation-card__title">DON JULIO</h3>
+                    <p class="recommendation-card__description">Una de las mejores parrillas de Buenos Aires, ubicada en
+                        Palermo.</p>
+                    <a href="#" class="recommendation-card__link">Palermo, Buenos Aires</a>
+                </div>
+            </div>
+
+            <!-- Recommendation 4 -->
+            <div class="recommendation-card">
+                <div class="recommendation-card__image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80"
+                        alt="Café Tortoni">
+                </div>
+                <div class="recommendation-card__content">
+                    <h3 class="recommendation-card__title">CAFÉ TORTONI</h3>
+                    <p class="recommendation-card__description">El café más emblemático de Buenos Aires, fundado en
+                        1858. Ideal para disfrutar la cultura porteña.</p>
+                    <a href="#" class="recommendation-card__link">Av. de Mayo 825, CABA</a>
+                </div>
+            </div>
+
+            <!-- Recommendation 5 -->
+            <div class="recommendation-card">
+                <div class="recommendation-card__image">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Tegui">
+                </div>
+                <div class="recommendation-card__content">
+                    <h3 class="recommendation-card__title">TEGUI</h3>
+                    <p class="recommendation-card__description">Restaurante de alta cocina argentina. Una experiencia
+                        gastronómica única en Palermo.</p>
+                    <a href="#" class="recommendation-card__link">Palermo, Buenos Aires</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer__title">soytutaxi.com</h4>
+                    <a href="index.html" class="footer__link" data-i18n="nav_welcome">Bienvenido</a>
+                    <a href="vehiculos.html" class="footer__link" data-i18n="nav_vehicles">Vehículos</a>
+                    <a href="contacto.html" class="footer__link" data-i18n="nav_contact">Contacto</a>
+                    <a href="que-visitar.html" class="footer__link" data-i18n="nav_visit">Qué Visitar</a>
+                </div>
+
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_contact">Contacto</h4>
+                    <p class="footer__contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        info@soytutaxi.com
+                    </p>
+                    <p class="footer__contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        +5491163692528
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_share">Compartir en</h4>
+                    <a href="https://wa.me/5491163692528" class="footer__link" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__ssl"> <span data-i18n="footer_ssl">SSL 100% SEGURO</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5491163692528" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
