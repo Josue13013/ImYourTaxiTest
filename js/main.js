@@ -3,251 +3,78 @@
    GSAP Animations + i18n
    ================================== */
 
-// ============ TRANSLATIONS (i18n) ============
-const translations = {
-  es: {
-    // Navigation
-    nav_welcome: "Bienvenido",
-    nav_vehicles: "Vehículos",
-    nav_contact: "Contacto",
-    nav_visit: "Qué Visitar",
+// ============ TRANSLATIONS (i18n) - Dynamic JSON Loading ============
 
-    // Hero
-    hero_subtitle: "Bienvenido",
-    hero_title_1: "SOY TU",
-    hero_title_2: "TAXI",
-    hero_tagline: "Traslados A Los Aeropuertos",
-    hero_cta: "Reservar Ahora",
-    hero_scroll: "Scroll",
-
-    // Services
-    services_subtitle: "Nuestros Servicios",
-    services_title: "Traslados y Tours en Buenos Aires",
-    service_airport_title: "Aeropuertos",
-    service_airport_text: "Traslados seguros y puntuales a Ezeiza y Aeroparque Jorge Newbery.",
-    service_tours_title: "Tours por Buenos Aires",
-    service_tours_text: "Conoce los lugares más emblemáticos de la ciudad con nuestros tours personalizados.",
-    service_taxibus_title: "Taxibus",
-    service_taxibus_text: "Servicio para grupos de hasta 15 pasajeros con espacio para equipaje.",
-
-    // Pricing
-    pricing_subtitle: "Tarifas",
-    pricing_title: "Precios Transparentes",
-    pricing_route: "Traslado",
-    pricing_ezeiza: "Aeropuerto Ezeiza → CABA",
-    pricing_aeroparque: "Aeroparque → CABA",
-    pricing_details: "Hasta 4 pasajeros y 6 maletas",
-    pricing_cta: "Reservar",
-
-    // Mobile
-    mobile_subtitle: "Reserva Fácil",
-    mobile_title: "Reserva Tu Taxi Desde El Móvil",
-    mobile_text: "Estés donde estés, a cualquier hora del día, tienes a tu alcance nuestra web adaptada a smartphones para que puedas pedir tu taxi de forma rápida y fácil.",
-
-    // Taxibus
-    taxibus_title: "Taxibus: Grupos Grandes",
-    taxibus_text: "Solicite su cotización para servicios de 15 pasajeros con 15 maletas.",
-    taxibus_cta: "Solicitar Cotización",
-
-    // Vehicles
-    vehicles_subtitle: "Nuestra Flota",
-    vehicles_title: "Siempre Hacemos Feliz A Nuestros Clientes",
-    vehicles_text: "Proporcionando tantas opciones como sea posible.",
-
-    // Contact
-    contact_subtitle: "Contacto",
-    contact_title: "¿Tienes Preguntas?",
-    contact_name: "Nombre",
-    contact_email: "Email",
-    contact_message: "Mensaje",
-    contact_required: "* requerido",
-    contact_submit: "Enviar",
-    contact_info_title: "Información de Contacto",
-
-    // What to Visit
-    visit_subtitle: "Recomendaciones",
-    visit_title: "Nuestras Recomendaciones Gastronómicas en CABA",
-
-    // Footer
-    footer_links: "Enlaces",
-    footer_contact: "Contacto",
-    footer_share: "Compartir en",
-    footer_ssl: "Desarrollado con ❤️ por Josue Chura",
-    footer_powered: "Powered by",
-
-    // Language
-    lang_es: "Español",
-    lang_en: "English",
-    lang_zh: "中文"
-  },
-
-  en: {
-    // Navigation
-    nav_welcome: "Welcome",
-    nav_vehicles: "Vehicles",
-    nav_contact: "Contact",
-    nav_visit: "What to Visit",
-
-    // Hero
-    hero_subtitle: "Welcome",
-    hero_title_1: "I AM YOUR",
-    hero_title_2: "TAXI",
-    hero_tagline: "Airport Transfers",
-    hero_cta: "Book Now",
-    hero_scroll: "Scroll",
-
-    // Services
-    services_subtitle: "Our Services",
-    services_title: "Transfers and Tours in Buenos Aires",
-    service_airport_title: "Airports",
-    service_airport_text: "Safe and punctual transfers to Ezeiza and Aeroparque Jorge Newbery.",
-    service_tours_title: "Buenos Aires Tours",
-    service_tours_text: "Discover the most iconic places in the city with our personalized tours.",
-    service_taxibus_title: "Taxibus",
-    service_taxibus_text: "Service for groups up to 15 passengers with luggage space.",
-
-    // Pricing
-    pricing_subtitle: "Rates",
-    pricing_title: "Transparent Pricing",
-    pricing_route: "Transfer",
-    pricing_ezeiza: "Ezeiza Airport → CABA",
-    pricing_aeroparque: "Aeroparque → CABA",
-    pricing_details: "Up to 4 passengers and 6 suitcases",
-    pricing_cta: "Book",
-
-    // Mobile
-    mobile_subtitle: "Easy Booking",
-    mobile_title: "Book Your Taxi From Your Phone",
-    mobile_text: "Wherever you are, at any time of day, our mobile-friendly website allows you to book your taxi quickly and easily.",
-
-    // Taxibus
-    taxibus_title: "Taxibus: Large Groups",
-    taxibus_text: "Request a quote for services of 15 passengers with 15 suitcases.",
-    taxibus_cta: "Request Quote",
-
-    // Vehicles
-    vehicles_subtitle: "Our Fleet",
-    vehicles_title: "We Always Make Our Clients Happy",
-    vehicles_text: "Providing as many options as possible.",
-
-    // Contact
-    contact_subtitle: "Contact",
-    contact_title: "Have Questions?",
-    contact_name: "Name",
-    contact_email: "Email",
-    contact_message: "Message",
-    contact_required: "* required",
-    contact_submit: "Send",
-    contact_info_title: "Contact Information",
-
-    // What to Visit
-    visit_subtitle: "Recommendations",
-    visit_title: "Our Gastronomic Recommendations in CABA",
-
-    // Footer
-    footer_links: "Links",
-    footer_contact: "Contact",
-    footer_share: "Share on",
-    footer_ssl: "Developed with ❤️ by Josue Chura",
-    footer_powered: "Powered by",
-
-    // Language
-    lang_es: "Español",
-    lang_en: "English",
-    lang_zh: "中文"
-  },
-
-  zh: {
-    // Navigation
-    nav_welcome: "欢迎",
-    nav_vehicles: "车辆",
-    nav_contact: "联系我们",
-    nav_visit: "景点推荐",
-
-    // Hero
-    hero_subtitle: "欢迎",
-    hero_title_1: "我是你的",
-    hero_title_2: "出租车",
-    hero_tagline: "机场接送服务",
-    hero_cta: "立即预订",
-    hero_scroll: "滚动",
-
-    // Services
-    services_subtitle: "我们的服务",
-    services_title: "布宜诺斯艾利斯接送和旅游",
-    service_airport_title: "机场接送",
-    service_airport_text: "安全准时的埃塞萨和豪尔赫纽伯里机场接送服务。",
-    service_tours_title: "布宜诺斯艾利斯旅游",
-    service_tours_text: "通过我们的个性化旅游了解城市最具标志性的地方。",
-    service_taxibus_title: "出租巴士",
-    service_taxibus_text: "可容纳15名乘客的团体服务，配有行李空间。",
-
-    // Pricing
-    pricing_subtitle: "价格",
-    pricing_title: "透明定价",
-    pricing_route: "接送",
-    pricing_ezeiza: "埃塞萨机场 → 市区",
-    pricing_aeroparque: "城市机场 → 市区",
-    pricing_details: "最多4名乘客和6件行李",
-    pricing_cta: "预订",
-
-    // Mobile
-    mobile_subtitle: "便捷预订",
-    mobile_title: "从手机预订您的出租车",
-    mobile_text: "无论您身在何处，随时随地，我们的移动友好网站让您快速轻松地预订出租车。",
-
-    // Taxibus
-    taxibus_title: "出租巴士：大型团体",
-    taxibus_text: "为15名乘客和15件行李的服务请求报价。",
-    taxibus_cta: "请求报价",
-
-    // Vehicles
-    vehicles_subtitle: "我们的车队",
-    vehicles_title: "我们始终让客户满意",
-    vehicles_text: "提供尽可能多的选择。",
-
-    // Contact
-    contact_subtitle: "联系方式",
-    contact_title: "有问题吗？",
-    contact_name: "姓名",
-    contact_email: "电子邮件",
-    contact_message: "留言",
-    contact_required: "* 必填",
-    contact_submit: "发送",
-    contact_info_title: "联系信息",
-
-    // What to Visit
-    visit_subtitle: "推荐",
-    visit_title: "我们在布宜诺斯艾利斯的美食推荐",
-
-    // Footer
-    footer_links: "链接",
-    footer_contact: "联系方式",
-    footer_share: "分享到",
-    footer_ssl: "由 Josue Chura 用心开发 ❤️",
-    footer_powered: "技术支持",
-
-    // Language
-    lang_es: "Español",
-    lang_en: "English",
-    lang_zh: "中文"
-  }
-};
+// Cache for loaded translations
+let translations = {};
 
 // Language names for selector
 const languageNames = {
-  es: "Español",
   en: "English",
-  zh: "中文"
+  es: "Español",
+  ru: "Русский",
+  zh: "中文",
+  pt: "Português",
+  de: "Deutsch",
+  fr: "Français"
 };
 
+// Default language is English
+const DEFAULT_LANG = 'en';
+
 // Current language
-let currentLang = localStorage.getItem('soytutaxi-lang') || 'es';
+let currentLang = localStorage.getItem('soytutaxi-lang') || DEFAULT_LANG;
 
 // ============ i18n FUNCTIONS ============
 
-function setLanguage(lang) {
-  if (!translations[lang]) return;
+/**
+ * Load translations from JSON file
+ * @param {string} lang - Language code (en, es, ru, zh, pt, de, fr)
+ * @returns {Promise<Object>} - Translations object
+ */
+async function loadTranslations(lang) {
+  // Return from cache if already loaded
+  if (translations[lang]) {
+    return translations[lang];
+  }
+
+  try {
+    const response = await fetch(`locales/${lang}.json`);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    translations[lang] = data;
+    return data;
+
+  } catch (error) {
+    console.error(`Error loading ${lang} translations:`, error);
+
+    // Fallback to English if not already trying English
+    if (lang !== DEFAULT_LANG) {
+      console.warn(`Falling back to ${DEFAULT_LANG} translations`);
+      return loadTranslations(DEFAULT_LANG);
+    }
+
+    // If English also fails, return empty object
+    return {};
+  }
+}
+
+/**
+ * Update all page elements with new language
+ * @param {string} lang - Language code
+ */
+async function setLanguage(lang) {
+  // Load translations for this language
+  const langData = await loadTranslations(lang);
+
+  if (!langData || Object.keys(langData).length === 0) {
+    console.error(`No translations available for ${lang}`);
+    return;
+  }
 
   currentLang = lang;
   localStorage.setItem('soytutaxi-lang', lang);
@@ -255,16 +82,16 @@ function setLanguage(lang) {
   // Update all translatable elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
+    if (langData[key]) {
+      el.textContent = langData[key];
     }
   });
 
   // Update placeholders
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (translations[lang][key]) {
-      el.placeholder = translations[lang][key];
+    if (langData[key]) {
+      el.placeholder = langData[key];
     }
   });
 
@@ -283,6 +110,9 @@ function setLanguage(lang) {
   document.dispatchEvent(new CustomEvent('languageChanged', { detail: lang }));
 }
 
+/**
+ * Initialize language selector
+ */
 function initLanguageSelector() {
   const selector = document.querySelector('.lang-selector');
   if (!selector) return;
