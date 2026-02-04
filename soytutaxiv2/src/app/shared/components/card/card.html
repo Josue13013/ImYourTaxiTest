@@ -1,0 +1,119 @@
+<div [ngClass]="customClass()" class="relative overflow-hidden bg-bg-secondary border border-primary-900/30 rounded-2xl 
+           backdrop-blur-md shadow-blue-md transition-all duration-300 group
+           hover:-translate-y-2 hover:shadow-blue-xl hover:border-primary-500/60"
+    [class.p-8]="variant() !== 'recommendation'" [class.p-0]="variant() === 'recommendation'"
+    [class.text-center]="variant() === 'pricing'" [class.bg-gradient-to-br]="highlighted()"
+    [class.from-bg-elevated]="highlighted()" [class.to-bg-primary]="highlighted()"
+    [class.border-primary-500_80]="highlighted()" [class.shadow-glow-primary]="highlighted()">
+
+    <!-- Glow Effect Background -->
+    <div
+        class="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-15 transition-opacity duration-300 pointer-events-none z-0">
+    </div>
+
+    <!-- Content Helper Wrapper -->
+    <div class="relative z-10 h-full flex flex-col">
+
+        <!-- DEFAULT VARIANT -->
+        <ng-container *ngIf="variant() === 'default'">
+            <div *ngIf="icon()"
+                class="w-20 h-20 rounded-full bg-gradient-primary flex items-center justify-center mb-6 shadow-glow-primary mx-auto md:mx-0">
+                <i [class]="'pi ' + icon() + ' text-4xl text-white'"></i>
+            </div>
+
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                {{ title() | translate }}
+            </h3>
+
+            <p *ngIf="description()" class="text-base leading-relaxed text-text-secondary mb-4 opacity-90">
+                {{ description() || '' | translate }}
+            </p>
+
+            <ul *ngIf="features() && features()!.length > 0" class="my-4 space-y-2">
+                <li *ngFor="let feature of features()!" class="flex items-start gap-2 text-text-accent text-sm">
+                    <i class="pi pi-check text-primary-300 mt-1 flex-shrink-0"></i>
+                    <span>{{ feature | translate }}</span>
+                </li>
+            </ul>
+
+            <div class="mt-auto">
+                <a *ngIf="linkUrl() || link()" [href]="linkUrl() || link()" class="inline-flex items-center gap-1 text-primary-300 font-semibold mt-4 
+                          transition-all duration-200 group-hover:gap-2 group-hover:text-white">
+                    {{ (linkText() || 'common_learn_more') | translate }}
+                    <i class="pi pi-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </ng-container>
+
+        <!-- PRICING VARIANT -->
+        <ng-container *ngIf="variant() === 'pricing'">
+            <div *ngIf="badge()"
+                class="absolute top-4 right-4 bg-gradient-primary text-white px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm z-20">
+                <span>{{ badge() || '' | translate }}</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white mt-4 mb-2">
+                {{ title() | translate }}
+            </h3>
+
+            <div class="flex items-baseline justify-center gap-1 my-6 text-primary-300">
+                <span class="text-2xl font-semibold">{{ currency() }}</span>
+                <span
+                    class="text-5xl md:text-6xl font-bold bg-gradient-primary bg-clip-text text-transparent leading-none">
+                    {{ price() }}
+                </span>
+            </div>
+
+            <p *ngIf="description()" class="text-text-secondary mb-6 text-sm">
+                {{ description() || '' | translate }}
+            </p>
+
+            <ul *ngIf="features() && features()!.length > 0" class="flex-1 text-left space-y-3 mb-8 px-2">
+                <li *ngFor="let feature of features()!" class="flex items-start gap-3 text-text-accent">
+                    <i class="pi pi-check text-primary-300 mt-0.5 flex-shrink-0"></i>
+                    <span class="text-sm font-medium">{{ feature | translate }}</span>
+                </li>
+            </ul>
+
+            <button
+                class="w-full py-3 px-6 bg-gradient-primary text-white rounded-xl font-bold text-base shadow-blue-md 
+                           transition-all duration-300 hover:scale-105 hover:shadow-glow-primary-intense active:scale-95">
+                {{ (buttonText() || 'pricing_book_now') | translate }}
+            </button>
+        </ng-container>
+
+        <!-- RECOMMENDATION VARIANT -->
+        <ng-container *ngIf="variant() === 'recommendation'">
+            <div *ngIf="finalImageUrl()" class="relative w-full h-[220px] overflow-hidden">
+                <img [src]="finalImageUrl()" [alt]="title() | translate"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-bg-secondary/90 to-transparent pointer-events-none">
+                </div>
+            </div>
+
+            <div class="flex-1 flex flex-col p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-white mb-2">
+                    {{ title() | translate }}
+                </h3>
+
+                <p *ngIf="location()" class="flex items-center gap-2 text-primary-300 text-sm font-medium mb-3">
+                    <i class="pi pi-map-marker"></i>
+                    {{ location() }}
+                </p>
+
+                <p *ngIf="description()" class="text-text-secondary text-sm leading-relaxed mb-6 line-clamp-3">
+                    {{ description() || '' | translate }}
+                </p>
+
+                <div class="mt-auto">
+                    <a *ngIf="linkUrl() || link()" [href]="linkUrl() || link()" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary-300 font-semibold text-sm
+                              transition-all duration-200 hover:text-white group-hover/link:gap-3">
+                        {{ (linkText() || 'common_view_more') | translate }}
+                        <i class="pi pi-external-link"></i>
+                    </a>
+                </div>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

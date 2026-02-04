@@ -1,0 +1,68 @@
+<footer class="mt-20 pt-16 pb-8 bg-gradient-to-b from-[#0A1931] to-black border-t border-primary-500/20 text-gray-400">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Top Section -->
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-12 pb-10 border-b border-primary-500/10">
+
+            <!-- Brand Column -->
+            <div class="md:col-span-2 lg:col-span-1 max-w-md">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="pi pi-car text-3xl text-primary-300"></i>
+                    <span
+                        class="text-2xl font-bold bg-gradient-to-br from-[#E8D5B5] to-[#5BA3D0] bg-clip-text text-transparent">
+                        SoyTuTaxi
+                    </span>
+                </div>
+                <p class="text-sm leading-relaxed text-text-muted mb-6">
+                    {{ 'footer_description' | translate }}
+                </p>
+                <!-- Social Links -->
+                <div class="flex gap-3">
+                    <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener noreferrer"
+                        [attr.aria-label]="social.label"
+                        class="w-10 h-10 rounded-full bg-primary-500/10 border border-primary-500/30 
+                              flex items-center justify-center text-primary-300 
+                              transition-all duration-300
+                              hover:bg-primary-500/20 hover:border-primary-300 hover:-translate-y-0.5 hover:shadow-blue-sm">
+                        <i [class]="social.icon + ' text-lg'"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="md:text-left">
+                <h3 class="text-base font-semibold text-white uppercase tracking-wider mb-5">
+                    {{ 'footer_quick_links' | translate }}
+                </h3>
+                <ul class="space-y-2">
+                    <li *ngFor="let link of navLinks">
+                        <a [routerLink]="link.route"
+                            class="text-sm text-text-muted hover:text-primary-300 hover:pl-2 transition-all duration-300 block">
+                            {{ link.label | translate }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-base font-semibold text-white uppercase tracking-wider mb-5">
+                    {{ 'footer_contact' | translate }}
+                </h3>
+                <ul class="space-y-4">
+                    <li *ngFor="let info of contactInfo" class="flex items-center gap-3 text-sm text-text-muted">
+                        <i [class]="info.icon + ' text-primary-300 text-base'"></i>
+                        <span>{{ info.text }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="pt-8 text-center text-xs text-text-muted/80">
+            <p>
+                © {{ currentYear }} SoyTuTaxi. {{ 'footer_rights' | translate }}
+            </p>
+        </div>
+    </div>
+</footer>

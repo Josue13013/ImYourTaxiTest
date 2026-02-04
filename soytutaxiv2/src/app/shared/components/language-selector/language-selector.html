@@ -1,0 +1,52 @@
+<div class="relative z-50">
+    <!-- Toggle Button -->
+    <button (click)="toggleDropdown()" class="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2.5
+                   bg-primary-900/30 hover:bg-primary-900/50
+                   border border-primary-500/30 hover:border-primary-500/50
+                   rounded-lg backdrop-blur-sm
+                   transition-all duration-300
+                   group relative z-50" [class.bg-primary-900/60]="isOpen" [class.border-primary-500/60]="isOpen"
+        type="button" aria-label="Select Language">
+
+        <span class="text-xl md:text-2xl leading-none grayscale-[0.2] group-hover:grayscale-0 transition-all">
+            {{ currentLanguageData.flag }}
+        </span>
+
+        <span class="hidden md:block text-sm font-medium text-gray-200 group-hover:text-white transition-colors">
+            {{ currentLanguageData.name }}
+        </span>
+
+        <i class="pi pi-chevron-down text-xs text-primary-400 group-hover:text-primary-300
+                  transition-transform duration-300" [class.rotate-180]="isOpen"></i>
+    </button>
+
+    <!-- Backdrop for click outside (Fix para falta de directiva clickOutside) -->
+    <div *ngIf="isOpen" (click)="closeDropdown()" class="fixed inset-0 z-40 bg-transparent cursor-default"></div>
+
+    <!-- Dropdown Menu -->
+    <div *ngIf="isOpen" class="absolute top-full right-0 mt-2 min-w-[180px]
+                bg-gray-900/95 backdrop-blur-xl
+                border border-primary-500/20 rounded-xl
+                shadow-2xl shadow-black/50
+                overflow-hidden z-50
+                animate-slide-down origin-top-right">
+
+        <button *ngFor="let lang of languages" (click)="changeLanguage(lang.code)" class="w-full flex items-center gap-3 px-4 py-3
+                       text-left transition-all duration-200
+                       hover:bg-primary-500/10 group/item cursor-pointer
+                       border-b border-white/5 last:border-0 outline-none" type="button">
+
+            <span class="text-xl grayscale-[0.4] group-hover/item:grayscale-0 transition-all">
+                {{ lang.flag }}
+            </span>
+
+            <span class="flex-1 text-sm font-medium text-gray-400 group-hover/item:text-white transition-colors"
+                [class.text-primary-300]="isCurrentLanguage(lang.code)"
+                [class.font-bold]="isCurrentLanguage(lang.code)">
+                {{ lang.name }}
+            </span>
+
+            <i *ngIf="isCurrentLanguage(lang.code)" class="pi pi-check text-xs text-secondary-400 animate-fade-in"></i>
+        </button>
+    </div>
+</div>

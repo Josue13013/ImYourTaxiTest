@@ -1,0 +1,34 @@
+<div class="max-w-[1400px] mx-auto px-6 py-20 min-h-screen">
+    <!-- Header Section -->
+    <app-section-header subtitle="contact_subtitle" title="contact_title" text="contact_text" [centerText]="true"
+        variant="light" />
+
+    <!-- Contact Info Cards -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16">
+        <app-contact-info-card *ngFor="let card of contactCards" [icon]="card.icon" [title]="card.title"
+            [info]="card.info" [linkUrl]="card.linkUrl" />
+    </section>
+
+    <!-- Form and Map Grid -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mt-16">
+        <!-- Contact Form -->
+        <div class="w-full">
+            <app-contact-form />
+        </div>
+
+        <!-- Map -->
+        <div class="w-full h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-primary-500/20">
+            @defer (on viewport) {
+            <app-contact-map [latitude]="-34.6037" [longitude]="-58.3816" [zoom]="15" height="100%" />
+            } @placeholder {
+            <div class="w-full h-full bg-bg-secondary flex items-center justify-center">
+                <i class="pi pi-map text-4xl text-primary-500/50 animate-pulse"></i>
+            </div>
+            } @loading {
+            <div class="w-full h-full bg-bg-secondary flex items-center justify-center">
+                <i class="pi pi-spin pi-spinner text-4xl text-primary-500"></i>
+            </div>
+            }
+        </div>
+    </section>
+</div>

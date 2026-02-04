@@ -1,0 +1,4 @@
+/* Clase aplicada por GSAP cuando se hace scroll */
+.scrolled-glass {
+    @apply bg-bg-primary/90 backdrop-blur-xl border-primary-500/20 shadow-blue-sm;
+}

@@ -1,0 +1,38 @@
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center py-16 md:py-20 lg:py-24">
+    <div #heroText class="text-center lg:text-left order-2 lg:order-1">
+        <span class="inline-block text-sm font-bold text-primary-300 uppercase tracking-[0.2em] mb-4">
+            {{ vehicleType }}
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-[1.1]">
+            {{ vehicleName }}
+        </h1>
+
+        <div class="flex flex-wrap justify-center lg:justify-start gap-6 mb-10">
+            <div
+                class="flex items-center gap-3 text-text-secondary bg-primary-900/10 px-4 py-2 rounded-lg border border-primary-500/10">
+                <i class="pi pi-users text-xl text-primary-300"></i>
+                <span class="font-medium">{{ capacity }} {{ 'vehicle_passengers' | translate }}</span>
+            </div>
+            <div
+                class="flex items-center gap-3 text-text-secondary bg-primary-900/10 px-4 py-2 rounded-lg border border-primary-500/10">
+                <i class="pi pi-dollar text-xl text-primary-300"></i>
+                <span class="font-medium">ARS {{ pricePerHour }}/{{ 'vehicle_hour' | translate }}</span>
+            </div>
+        </div>
+
+        <button (click)="bookNow()"
+            class="px-10 py-4 bg-gradient-to-br from-[#2C5F8D] to-[#5BA3D0] text-white rounded-xl font-bold text-base shadow-lg shadow-primary-500/20 transition-all duration-300 hover:scale-105 hover:shadow-glow-primary active:scale-95">
+            {{ 'vehicle_book' | translate }}
+        </button>
+    </div>
+
+    <div #heroImage class="relative order-1 lg:order-2" *ngIf="image">
+        <div
+            class="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-primary-500/20 relative z-10">
+            <img [src]="image" [alt]="vehicleName"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+        </div>
+        <!-- Decorative Glow -->
+        <div class="absolute -inset-10 bg-primary-500/20 blur-3xl rounded-full opacity-50 z-0"></div>
+    </div>
+</section>

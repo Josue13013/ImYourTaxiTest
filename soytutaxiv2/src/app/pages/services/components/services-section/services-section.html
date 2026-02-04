@@ -1,0 +1,6 @@
+<section class="py-16 md:py-20 lg:py-24">
+    <div #cardsGrid class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-10">
+        <app-card *ngFor="let service of services" variant="default" [icon]="service.icon" [title]="service.title"
+            [description]="service.description" linkText="common_learn_more" linkUrl="/services" customClass="h-full" />
+    </div>
+</section>

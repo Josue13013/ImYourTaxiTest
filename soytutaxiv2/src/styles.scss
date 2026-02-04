@@ -1,0 +1,155 @@
+/* ==================== TAILWIND CSS ==================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==================== GOOGLE FONTS ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ==================== CSS VARIABLES - PREMIUM BLUE PALETTE ==================== */
+:root {
+    /* === FONDOS (Oscuros) === */
+    --color-bg-primary: #0A0A0A;
+    /* Negro profundo - fondo principal */
+    --color-bg-secondary: #1A1A1A;
+    /* Negro carbón - cards y componentes */
+    --color-bg-tertiary: #2D2D2D;
+    /* Gris pizarra - elementos elevados */
+    --color-bg-elevated: #1E1E1E;
+    /* Gris grafito - superficies hover */
+
+    /* === ACENTOS (Azules) === */
+    --color-primary: #1E3A5F;
+    /* Azul medianoche - acento principal */
+    --color-primary-light: #2C5F8D;
+    /* Azul medianoche claro */
+    --color-primary-dark: #0A1931;
+    /* Azul marino profundo */
+    --color-accent: #2C3E50;
+    /* Azul acero - acento secundario */
+    --color-accent-light: #4A5F7F;
+    /* Azul acero claro */
+    --color-teal: #1A4D4D;
+    /* Verde azulado - detalles especiales */
+
+    /* === TEXTO (Claros) === */
+    --color-text-primary: #F5F5DC;
+    /* Crema elegante - texto principal */
+    --color-text-secondary: #C0C0C0;
+    /* Plata - texto secundario */
+    --color-text-muted: #808080;
+    /* Gris medio - texto terciario */
+    --color-text-accent: #B8B8B8;
+    /* Gris plata - subtítulos */
+    --color-text-dark: #1A1A1A;
+    /* Para fondos claros */
+
+    /* === ESTADOS === */
+    --color-success: #0E4D3A;
+    /* Verde oscuro - éxito */
+    --color-warning: #8B6914;
+    /* Amarillo oscuro - advertencia */
+    --color-error: #8B0000;
+    /* Rojo oscuro - error */
+    --color-info: #1E3A5F;
+    /* Azul medianoche - información */
+
+    /* === GRADIENTES PREMIUM === */
+    --gradient-primary: linear-gradient(135deg, #1E3A5F 0%, #0A1931 100%);
+    --gradient-hero: linear-gradient(135deg, #0A1931 0%, #1E3A5F 50%, #0A0A0A 100%);
+    --gradient-accent: linear-gradient(135deg, #2C3E50 0%, #1E3A5F 100%);
+    --gradient-dark: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
+    --gradient-subtle: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+
+    /* === SPACING === */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    --space-xl: 4rem;
+    --space-2xl: 6rem;
+    --space-3xl: 8rem;
+
+    /* === TYPOGRAPHY === */
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-size-base: 16px;
+
+    /* === TRANSITIONS === */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* === SOMBRAS CON TINTE AZUL === */
+    --shadow-sm: 0 2px 8px rgba(30, 58, 95, 0.15);
+    --shadow-md: 0 4px 16px rgba(30, 58, 95, 0.2);
+    --shadow-lg: 0 10px 30px rgba(30, 58, 95, 0.25);
+    --shadow-xl: 0 20px 60px rgba(30, 58, 95, 0.3);
+    --glow-primary: 0 0 20px rgba(30, 58, 95, 0.5);
+    --glow-primary-intense: 0 0 40px rgba(30, 58, 95, 0.7);
+    --glow-accent: 0 0 20px rgba(44, 62, 80, 0.5);
+
+    /* === SOMBRAS OSCURAS (sin tinte) === */
+    --shadow-dark-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-dark-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-dark-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ==================== GLOBAL RESET ==================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== GLOBAL UTILITIES ==================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section {
+    padding: var(--space-xl) 0;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn var(--transition-normal);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 14px;
+        --space-xl: 2rem;
+    }
+}

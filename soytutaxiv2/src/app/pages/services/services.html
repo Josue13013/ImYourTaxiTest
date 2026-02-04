@@ -1,0 +1,111 @@
+<div class="max-w-[1400px] mx-auto px-6 py-20 min-h-screen">
+    <!-- Hero Section -->
+    <section class="mb-20">
+        <app-section-header subtitle="services_page_subtitle" title="services_page_title" text="services_page_text"
+            [centerText]="true" variant="light" />
+    </section>
+
+    <!-- Services Grid -->
+    <section class="mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+            <div *ngFor="let service of services" class="group bg-primary-900/20 border-2 border-primary-500/30 rounded-3xl p-8 md:p-10 transition-all duration-300
+                        hover:-translate-y-2 hover:border-primary-500/60 hover:shadow-2xl hover:shadow-primary-500/20">
+
+                <div class="w-[70px] h-[70px] rounded-2xl bg-gradient-to-br from-primary-500/20 to-[#E8D5B5]/20 
+                            flex items-center justify-center mb-6 shadow-inner border border-white/5">
+                    <i [class]="service.icon + ' text-3xl text-primary-300'"></i>
+                </div>
+
+                <h3 class="text-2xl font-bold text-white mb-4">{{ service.title | translate }}</h3>
+
+                <p class="text-[15px] leading-relaxed text-text-secondary mb-6 h-auto min-h-[48px]">
+                    {{ service.description | translate }}
+                </p>
+
+                <ul class="space-y-3 mb-8">
+                    <li *ngFor="let feature of service.features" class="flex items-start gap-3 text-sm text-text-muted">
+                        <i class="pi pi-check-circle text-primary-300 text-base mt-0.5 flex-shrink-0"></i>
+                        <span>{{ feature | translate }}</span>
+                    </li>
+                </ul>
+
+                <div class="flex flex-col gap-1 mb-6 pt-6 border-t border-primary-500/20" *ngIf="service.price">
+                    <span class="text-xs text-text-muted uppercase tracking-wider">{{ 'services_from' | translate
+                        }}</span>
+                    <span class="text-3xl font-bold text-primary-300">{{ service.currency }} {{ service.price }}</span>
+                </div>
+
+                <button class="w-full py-4 bg-gradient-to-br from-[#5BA3D0] to-[#4A8AB8] text-white rounded-xl 
+                               font-semibold text-[15px] shadow-lg shadow-primary-500/20 transition-all duration-300 
+                               hover:scale-[1.02] hover:shadow-xl hover:shadow-primary-500/40 active:scale-[0.98]">
+                    {{ service.cta | translate }}
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="mb-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-16">{{ 'services_why_title' | translate }}
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+                class="text-center p-8 bg-primary-900/10 rounded-3xl border border-primary-500/10 hover:bg-primary-900/20 transition-colors">
+                <i class="pi pi-shield text-5xl text-primary-300 mb-6 block"></i>
+                <h3 class="text-xl font-bold text-white mb-3">{{ 'services_benefit_1_title' | translate }}</h3>
+                <p class="text-[15px] leading-relaxed text-text-muted">{{ 'services_benefit_1_text' | translate }}</p>
+            </div>
+
+            <div
+                class="text-center p-8 bg-primary-900/10 rounded-3xl border border-primary-500/10 hover:bg-primary-900/20 transition-colors">
+                <i class="pi pi-clock text-5xl text-primary-300 mb-6 block"></i>
+                <h3 class="text-xl font-bold text-white mb-3">{{ 'services_benefit_2_title' | translate }}</h3>
+                <p class="text-[15px] leading-relaxed text-text-muted">{{ 'services_benefit_2_text' | translate }}</p>
+            </div>
+
+            <div
+                class="text-center p-8 bg-primary-900/10 rounded-3xl border border-primary-500/10 hover:bg-primary-900/20 transition-colors">
+                <i class="pi pi-dollar text-5xl text-primary-300 mb-6 block"></i>
+                <h3 class="text-xl font-bold text-white mb-3">{{ 'services_benefit_3_title' | translate }}</h3>
+                <p class="text-[15px] leading-relaxed text-text-muted">{{ 'services_benefit_3_text' | translate }}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="mb-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-16">{{ 'services_faq_title' | translate }}
+        </h2>
+
+        <div class="max-w-4xl mx-auto space-y-6">
+            <div *ngFor="let faq of faqs"
+                class="bg-primary-900/15 border-l-4 border-primary-500 rounded-xl p-8 hover:bg-primary-900/25 transition-colors">
+                <h3 class="flex items-center gap-3 text-lg font-bold text-white mb-3">
+                    <i class="pi pi-question-circle text-primary-300 text-xl"></i>
+                    {{ faq.question | translate }}
+                </h3>
+                <p class="text-[15px] leading-relaxed text-text-secondary pl-8">{{ faq.answer | translate }}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-br from-primary-900/30 to-[#E8D5B5]/5 border border-primary-500/30 
+                    rounded-3xl p-10 md:p-16 text-center backdrop-blur-sm">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ 'services_cta_title' | translate }}</h2>
+        <p class="text-base text-text-secondary mb-10 max-w-2xl mx-auto">{{ 'services_cta_text' | translate }}</p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="px-10 py-4 bg-gradient-to-br from-[#5BA3D0] to-[#4A8AB8] text-white rounded-xl 
+                           font-semibold text-base shadow-lg shadow-primary-500/20 transition-all duration-300 
+                           hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/40">
+                {{ 'services_cta_book' | translate }}
+            </button>
+            <button class="px-10 py-4 bg-transparent text-primary-300 border-2 border-primary-500 rounded-xl 
+                           font-semibold text-base transition-all duration-300 hover:bg-primary-500/10">
+                {{ 'services_cta_contact' | translate }}
+            </button>
+        </div>
+    </section>
+</div>

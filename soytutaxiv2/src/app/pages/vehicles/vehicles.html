@@ -1,0 +1,42 @@
+<div class="max-w-[1400px] mx-auto px-6 py-20 min-h-screen">
+    <!-- Header Section -->
+    <app-section-header subtitle="vehicles_subtitle" title="vehicles_title" text="vehicles_text" [centerText]="true"
+        variant="light" />
+
+    <!-- Featured Vehicle -->
+    <section class="my-16">
+        <app-vehicle-hero-section [vehicleName]="selectedVehicle.name" [vehicleType]="selectedVehicle.type"
+            [capacity]="selectedVehicle.capacity" [pricePerHour]="selectedVehicle.pricePerHour"
+            [image]="selectedVehicle.image" />
+    </section>
+
+    <!-- Vehicle Gallery -->
+    <section class="my-16">
+        <app-vehicle-gallery [images]="selectedVehicle.images" />
+    </section>
+
+    <!-- Other Vehicles (Optional) -->
+    <section class="mt-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-10">
+            {{ 'vehicles_other_title' | translate }}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div *ngFor="let vehicle of vehicles" class="group bg-primary-900/20 border-2 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300
+                        hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-500/20"
+                [class.border-primary-500]="selectedVehicle === vehicle"
+                [class.border-primary-500_30]="selectedVehicle !== vehicle"
+                [class.shadow-glow-primary]="selectedVehicle === vehicle" (click)="selectedVehicle = vehicle">
+
+                <img [src]="vehicle.image" [alt]="vehicle.name" class="w-full h-48 object-cover">
+
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold text-white mb-2">{{ vehicle.name }}</h3>
+                    <div class="flex items-center gap-2 text-[15px] text-text-secondary">
+                        <i class="pi pi-users text-primary-300"></i>
+                        <span>{{ vehicle.capacity }} {{ 'vehicle_passengers' | translate }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

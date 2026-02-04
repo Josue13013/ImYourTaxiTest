@@ -1,0 +1,139 @@
+/**
+ * App Component Styles
+ * Preview page para testing de componentes
+ */
+
+.app-container {
+    min-height: 100vh;
+    background: var(--color-bg-primary);
+    padding: var(--space-xl) var(--space-md);
+}
+
+// ==================== DEMO HEADER ====================
+
+.demo-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid rgba(30, 58, 95, 0.2);
+}
+
+.demo-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-sm);
+}
+
+.demo-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+}
+
+// ==================== DEMO SECTIONS ====================
+
+.demo-section {
+    max-width: 1200px;
+    margin: 0 auto var(--space-3xl);
+    padding: var(--space-xl);
+    background: var(--color-bg-secondary);
+    border-radius: 12px;
+    border: 1px solid rgba(30, 58, 95, 0.2);
+    box-shadow: var(--shadow-lg);
+}
+
+.demo-label {
+    margin-bottom: var(--space-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+
+    h3 {
+        font-size: 1.5rem;
+        color: var(--color-text-primary);
+        font-weight: 600;
+        margin: 0;
+    }
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.875rem;
+    background: var(--gradient-primary);
+    color: var(--color-text-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+
+    &.upcoming {
+        background: linear-gradient(135deg, #8B6914 0%, #8B0000 100%);
+    }
+}
+
+.component-demo {
+    background: var(--color-bg-elevated);
+    padding: var(--space-xl);
+    border-radius: 8px;
+    border: 1px solid rgba(30, 58, 95, 0.1);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// ==================== CARDS GRID ====================
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+// ==================== COMING SOON ====================
+
+.coming-soon {
+    opacity: 0.6;
+    text-align: center;
+
+    .coming-soon-text {
+        font-size: 1.25rem;
+        color: var(--color-text-muted);
+        font-style: italic;
+        padding: var(--space-xl);
+    }
+}
+
+//====================RESPONSIVE ====================
+
+@media (max-width: 768px) {
+    .app-container {
+        padding: var(--space-lg) var(--space-sm);
+    }
+
+    .demo-section {
+        padding: var(--space-md);
+    }
+
+    .component-demo {
+        padding: var(--space-md);
+    }
+
+    .demo-label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

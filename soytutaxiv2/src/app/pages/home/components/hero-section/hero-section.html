@@ -1,0 +1,62 @@
+<section
+    class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[600px] py-20 lg:py-32 max-w-7xl mx-auto px-6">
+
+    <!-- Content Side -->
+    <div class="text-center lg:text-left order-2 lg:order-1" #heroContent>
+        <span class="inline-block text-sm font-semibold text-5BA3D0 uppercase tracking-[0.15em] mb-4 text-primary-300">
+            {{ 'hero_subtitle_1' | translate }}
+        </span>
+
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 
+                   bg-gradient-to-br from-[#E8D5B5] to-[#5BA3D0] bg-clip-text text-transparent">
+            {{ 'hero_title_1' | translate }}
+        </h1>
+
+        <p class="text-lg md:text-xl leading-relaxed text-text-secondary mb-10 max-w-lg mx-auto lg:mx-0">
+            {{ 'hero_text' | translate }}
+        </p>
+
+        <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-12">
+            <button class="px-8 py-4 bg-gradient-to-br from-[#2C5F8D] to-[#5BA3D0] text-white rounded-xl font-bold text-lg 
+                           shadow-lg shadow-primary-500/20 transition-all duration-300 
+                           hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/40 active:scale-95">
+                {{ 'hero_book_now' | translate }}
+            </button>
+            <button class="px-8 py-4 bg-transparent text-primary-300 border-2 border-primary-500/50 rounded-xl font-bold text-lg 
+                           transition-all duration-300 hover:bg-primary-500/10 hover:border-primary-500">
+                {{ 'hero_learn_more' | translate }}
+            </button>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <div class="flex items-center justify-center lg:justify-start gap-3 text-text-muted text-[15px]">
+                <i class="pi pi-check-circle text-primary-300 text-lg"></i>
+                <span>{{ 'hero_feature_1' | translate }}</span>
+            </div>
+            <div class="flex items-center justify-center lg:justify-start gap-3 text-text-muted text-[15px]">
+                <i class="pi pi-check-circle text-primary-300 text-lg"></i>
+                <span>{{ 'hero_feature_2' | translate }}</span>
+            </div>
+            <div class="flex items-center justify-center lg:justify-start gap-3 text-text-muted text-[15px]">
+                <i class="pi pi-check-circle text-primary-300 text-lg"></i>
+                <span>{{ 'hero_feature_3' | translate }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Side -->
+    <div class="relative order-1 lg:order-2" #heroImage>
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40 border border-primary-500/20">
+            <!-- Overlay Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#2C5F8D]/30 to-[#5BA3D0]/10 z-10 pointer-events-none">
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200" alt="Taxi"
+                class="w-full h-full object-cover block aspect-[4/3] lg:aspect-square xl:aspect-[4/3]">
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-accent-gold/10 rounded-full blur-3xl"></div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+<!-- Header con navegación -->
+<app-header />
+
+<!-- Contenido de las páginas -->
+<main class="main-content">
+  <router-outlet (activate)="onRouteActivate($event)" />
+</main>
+
+<!-- WhatsApp Button Flotante -->
+<app-whatsapp-button phoneNumber="+5491112345678" message="Hola! Quisiera información sobre SoyTuTaxi"
+  tooltipText="Chat on WhatsApp" />
+
+<!-- Footer -->
+<app-footer />

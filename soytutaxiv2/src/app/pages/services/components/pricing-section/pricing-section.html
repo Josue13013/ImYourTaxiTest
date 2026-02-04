@@ -1,0 +1,8 @@
+<section class="py-16 md:py-20 lg:py-24">
+    <div #pricingGrid
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-6xl mx-auto px-4 md:px-0">
+        <app-card *ngFor="let plan of pricingPlans" variant="pricing" [title]="plan.title" [price]="plan.price"
+            [currency]="plan.currency" [badge]="plan.badge" [highlighted]="plan.highlighted"
+            buttonText="pricing_book_now" customClass="h-full transform transition-transform md:hover:-translate-y-2" />
+    </div>
+</section>
