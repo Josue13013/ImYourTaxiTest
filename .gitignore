@@ -1,0 +1,20 @@
+# Angular
+soytutaxiv2/.angular/
+soytutaxiv2/.vscode/
+soytutaxiv2/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+v2/dist/
+
+# Claude Code
+soytutaxiv2/.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+

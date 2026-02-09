@@ -39,9 +39,9 @@ export class BookingFormComponent implements OnInit, OnDestroy {
     showSuccess = false;
 
     vehicleOptions = [
-        { value: 'sedan', icon: 'pi pi-car', label: 'Sedan Premium', sublabel: '1-4 Pax' },
-        { value: 'suv', icon: 'pi pi-truck', label: 'SUV Comfort', sublabel: '1-6 Pax' },
-        { value: 'van', icon: 'pi pi-directions-alt', label: 'Business Van', sublabel: '1-15 Pax' }
+        { value: 'sedan', icon: 'pi pi-car', label: 'booking_sedan', sublabel: 'booking_sedan_capacity' },
+        { value: 'suv', icon: 'pi pi-truck', label: 'booking_suv', sublabel: 'booking_suv_capacity' },
+        { value: 'van', icon: 'pi pi-directions-alt', label: 'booking_van', sublabel: 'booking_van_capacity' }
     ];
 
     ngOnInit(): void {

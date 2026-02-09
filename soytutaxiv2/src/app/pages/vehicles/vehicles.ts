@@ -23,7 +23,7 @@ import { VehicleGalleryComponent } from './components/vehicle-gallery/vehicle-ga
 export class VehiclesComponent {
   vehicles = [
     {
-      name: 'Sedan Premium',
+      name: 'vehicles_sedan_name',
       type: 'vehicles_sedan_type',
       capacity: 4,
       pricePerHour: 8000,
@@ -35,7 +35,7 @@ export class VehiclesComponent {
       ]
     },
     {
-      name: 'SUV Comfort',
+      name: 'vehicles_suv_name',
       type: 'vehicles_suv_type',
       capacity: 6,
       pricePerHour: 12000,

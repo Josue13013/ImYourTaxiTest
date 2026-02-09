@@ -27,10 +27,10 @@
                 [class.border-primary-500_30]="selectedVehicle !== vehicle"
                 [class.shadow-glow-primary]="selectedVehicle === vehicle" (click)="selectedVehicle = vehicle">
 
-                <img [src]="vehicle.image" [alt]="vehicle.name" class="w-full h-48 object-cover">
+                <img [src]="vehicle.image" [alt]="vehicle.name | translate" class="w-full h-48 object-cover">
 
                 <div class="p-5">
-                    <h3 class="text-xl font-semibold text-white mb-2">{{ vehicle.name }}</h3>
+                    <h3 class="text-xl font-semibold text-white mb-2">{{ vehicle.name | translate }}</h3>
                     <div class="flex items-center gap-2 text-[15px] text-text-secondary">
                         <i class="pi pi-users text-primary-300"></i>
                         <span>{{ vehicle.capacity }} {{ 'vehicle_passengers' | translate }}</span>

@@ -32,7 +32,6 @@ export class ServicesComponent {
                 'services_airport_feature_4'
             ],
             price: '40.000',
-            currency: 'ARS',
             cta: 'services_book_now'
         },
         {
@@ -46,7 +45,6 @@ export class ServicesComponent {
                 'services_tours_feature_4'
             ],
             price: '25.000',
-            currency: 'ARS',
             cta: 'services_book_now'
         },
         {
@@ -60,7 +58,6 @@ export class ServicesComponent {
                 'services_corporate_feature_4'
             ],
             price: null,
-            currency: 'ARS',
             cta: 'services_request_quote'
         },
         {
@@ -74,7 +71,6 @@ export class ServicesComponent {
                 'services_groups_feature_4'
             ],
             price: null,
-            currency: 'ARS',
             cta: 'services_request_quote'
         },
         {
@@ -88,7 +84,6 @@ export class ServicesComponent {
                 'services_scheduled_feature_4'
             ],
             price: '30.000',
-            currency: 'ARS',
             cta: 'services_book_now'
         },
         {
@@ -102,7 +97,6 @@ export class ServicesComponent {
                 'services_vip_feature_4'
             ],
             price: null,
-            currency: 'ARS',
             cta: 'services_request_quote'
         }
     ];

@@ -23,7 +23,7 @@
 
     <div #qrContent
         class="flex flex-col items-center justify-center p-8 bg-bg-secondary/50 rounded-3xl border border-primary-500/10 backdrop-blur-sm max-w-xs mx-auto w-full">
-        <img [src]="qrCodeUrl" alt="QR Code"
+        <img [src]="qrCodeUrl" [alt]="'mobile_qr_alt' | translate"
             class="w-48 h-48 rounded-2xl shadow-2xl mb-4 border-4 border-white mixing-blend-screen opacity-90 transition-all duration-500 hover:scale-105 hover:opacity-100 bg-white p-2">
         <p class="text-sm text-text-muted font-medium">
             {{ 'mobile_qr_scan' | translate }}

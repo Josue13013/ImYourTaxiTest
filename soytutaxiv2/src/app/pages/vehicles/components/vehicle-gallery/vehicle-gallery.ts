@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, SimpleChanges, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { GsapAnimationService } from '../../../../core/services/gsap-animation';
 
 /**
@@ -8,7 +9,7 @@ import { GsapAnimationService } from '../../../../core/services/gsap-animation';
  */
 @Component({
   selector: 'app-vehicle-gallery',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './vehicle-gallery.html'
 })
 export class VehicleGalleryComponent implements OnChanges {

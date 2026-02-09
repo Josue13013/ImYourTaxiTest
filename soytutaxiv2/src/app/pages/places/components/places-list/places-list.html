@@ -5,7 +5,7 @@
             <input type="text" [formControl]="searchControl" class="w-full px-6 py-4 bg-bg-secondary/50 border border-primary-500/20 rounded-full text-white pl-12
                        focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500
                        transition-all duration-300 placeholder-text-muted shadow-lg shadow-black/20"
-                placeholder="Search places...">
+                [placeholder]="'places_search_placeholder' | translate">
             <i class="pi pi-search absolute left-4 top-1/2 -translate-y-1/2 text-primary-300 text-lg"></i>
 
             <!-- Loading Indicator (Optional) -->
@@ -21,7 +21,7 @@
 
         <div *ngIf="filteredPlaces.length === 0" class="col-span-full text-center py-12 text-text-secondary">
             <i class="pi pi-search text-4xl mb-4 opacity-50"></i>
-            <p>No places found matching your search.</p>
+            <p>{{ 'places_no_results' | translate }}</p>
         </div>
     </div>
 </section>

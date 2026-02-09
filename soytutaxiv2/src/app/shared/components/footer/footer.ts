@@ -34,11 +34,11 @@ export class FooterComponent {
    * Links de navegación
    */
   navLinks = [
-    { label: 'footer_home', route: '/' },
-    { label: 'footer_services', route: '/services' },
-    { label: 'footer_places', route: '/places' },
-    { label: 'footer_vehicles', route: '/vehicles' },
-    { label: 'footer_contact', route: '/contact' }
+    { label: 'nav_home', route: '/' },
+    { label: 'nav_services', route: '/services' },
+    { label: 'nav_places', route: '/places' },
+    { label: 'nav_vehicles', route: '/vehicles' },
+    { label: 'nav_contact', route: '/contact' }
   ];
 
   /**

@@ -1,10 +1,10 @@
 <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center py-16 md:py-20 lg:py-24">
     <div #heroText class="text-center lg:text-left order-2 lg:order-1">
         <span class="inline-block text-sm font-bold text-primary-300 uppercase tracking-[0.2em] mb-4">
-            {{ vehicleType }}
+            {{ vehicleType | translate }}
         </span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-[1.1]">
-            {{ vehicleName }}
+            {{ vehicleName | translate }}
         </h1>
 
         <div class="flex flex-wrap justify-center lg:justify-start gap-6 mb-10">
@@ -16,7 +16,7 @@
             <div
                 class="flex items-center gap-3 text-text-secondary bg-primary-900/10 px-4 py-2 rounded-lg border border-primary-500/10">
                 <i class="pi pi-dollar text-xl text-primary-300"></i>
-                <span class="font-medium">ARS {{ pricePerHour }}/{{ 'vehicle_hour' | translate }}</span>
+                <span class="font-medium">{{ 'common_currency' | translate }} {{ pricePerHour }}/{{ 'vehicle_hour' | translate }}</span>
             </div>
         </div>
 
@@ -29,7 +29,7 @@
     <div #heroImage class="relative order-1 lg:order-2" *ngIf="image">
         <div
             class="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-primary-500/20 relative z-10">
-            <img [src]="image" [alt]="vehicleName"
+            <img [src]="image" [alt]="vehicleName | translate"
                 class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
         </div>
         <!-- Decorative Glow -->

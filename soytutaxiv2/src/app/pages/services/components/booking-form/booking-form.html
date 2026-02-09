@@ -13,8 +13,7 @@
 
     <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
         <h3 class="text-2xl font-bold text-white mb-8 text-center md:text-left">
-            Request a Quote
-            <!-- TODO: Add translation key 'booking_title' -->
+            {{ 'booking_form_title' | translate }}
         </h3>
 
         <div class="space-y-6">
@@ -31,7 +30,7 @@
                         class="absolute left-4 -top-2.5 bg-[#0f172a] px-1 text-sm text-primary-300 transition-all duration-300
                                peer-placeholder-shown:text-base peer-placeholder-shown:text-text-secondary peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
                                peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-primary-500 peer-focus:bg-[#0f172a]">
-                        Pickup Location
+                        {{ 'booking_pickup' | translate }}
                     </label>
                     <i class="pi pi-map-marker absolute right-4 top-3.5 text-text-secondary"></i>
                 </div>
@@ -47,7 +46,7 @@
                         class="absolute left-4 -top-2.5 bg-[#0f172a] px-1 text-sm text-primary-300 transition-all duration-300
                                peer-placeholder-shown:text-base peer-placeholder-shown:text-text-secondary peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
                                peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-primary-500 peer-focus:bg-[#0f172a]">
-                        Dropoff Location
+                        {{ 'booking_dropoff' | translate }}
                     </label>
                     <i class="pi pi-flag absolute right-4 top-3.5 text-text-secondary"></i>
                 </div>
@@ -62,7 +61,7 @@
                                transition-all duration-300 min-h-[50px]
                                [color-scheme:dark]" [class.border-red-500]="f.date.invalid && f.date.touched">
                     <p *ngIf="f.date.errors?.['pastDate']" class="absolute -bottom-5 left-0 text-xs text-red-400 pl-4">
-                        Invalid date (past)
+                        {{ 'booking_date_error' | translate }}
                     </p>
                 </div>
 
@@ -83,14 +82,14 @@
                         class="absolute left-4 -top-2.5 bg-[#0f172a] px-1 text-sm text-primary-300 transition-all duration-300
                                peer-placeholder-shown:text-base peer-placeholder-shown:text-text-secondary peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
                                peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-primary-500 peer-focus:bg-[#0f172a]">
-                        Passengers
+                        {{ 'booking_passengers' | translate }}
                     </label>
                 </div>
             </div>
 
             <!-- Vehicle Selection (Cards) -->
             <div>
-                <label class="block text-sm font-medium text-text-secondary mb-3">Select Vehicle Type</label>
+                <label class="block text-sm font-medium text-text-secondary mb-3">{{ 'booking_vehicle_type' | translate }}</label>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <label *ngFor="let option of vehicleOptions" class="cursor-pointer relative group">
                         <input type="radio" formControlName="vehicleType" [value]="option.value" class="peer sr-only">
@@ -100,8 +99,8 @@
                                     hover:bg-primary-900/30 flex flex-col items-center justify-center gap-2 text-center h-full">
                             <i
                                 [class]="option.icon + ' text-2xl mb-1 text-primary-400 group-hover:scale-110 transition-transform'"></i>
-                            <span class="font-bold text-white text-sm">{{ option.label }}</span>
-                            <span class="text-xs text-text-secondary">{{ option.sublabel }}</span>
+                            <span class="font-bold text-white text-sm">{{ option.label | translate }}</span>
+                            <span class="text-xs text-text-secondary">{{ option.sublabel | translate }}</span>
                         </div>
                     </label>
                 </div>
@@ -116,7 +115,7 @@
                 <label for="notes" class="absolute left-4 -top-2.5 bg-[#0f172a] px-1 text-sm text-primary-300 transition-all duration-300
                            peer-placeholder-shown:text-base peer-placeholder-shown:text-text-secondary peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent
                            peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-primary-500 peer-focus:bg-[#0f172a]">
-                    Additional Notes
+                    {{ 'booking_notes' | translate }}
                 </label>
             </div>
 
@@ -126,8 +125,8 @@
                        transition-all duration-300 hover:shadow-glow-primary hover:scale-[1.02] active:scale-[0.98]
                        disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex justify-center items-center gap-2">
                 <i *ngIf="isSubmitting" class="pi pi-spin pi-spinner"></i>
-                <span *ngIf="!isSubmitting">Get Quote & Book</span>
-                <span *ngIf="isSubmitting">Processing...</span>
+                <span *ngIf="!isSubmitting">{{ 'booking_submit' | translate }}</span>
+                <span *ngIf="isSubmitting">{{ 'booking_processing' | translate }}</span>
             </button>
         </div>
     </form>

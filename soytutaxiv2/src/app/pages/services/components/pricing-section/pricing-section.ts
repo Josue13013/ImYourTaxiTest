@@ -22,21 +22,21 @@ export class PricingSectionComponent implements AfterViewInit {
         {
             title: 'pricing_ezeiza_title',
             price: '40000',
-            currency: 'ARS',
+            currency: 'common_currency',
             badge: '',
             highlighted: false
         },
         {
             title: 'pricing_aeroparque_title',
             price: '25000',
-            currency: 'ARS',
+            currency: 'common_currency',
             badge: 'pricing_popular',
             highlighted: true
         },
         {
             title: 'pricing_hourly_title',
             price: '8000',
-            currency: 'ARS',
+            currency: 'common_currency',
             badge: '',
             highlighted: false
         }
