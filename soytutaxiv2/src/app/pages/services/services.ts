@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SectionHeaderComponent } from '../../shared/components/section-header/section-header';
@@ -16,7 +16,7 @@ import { SectionHeaderComponent } from '../../shared/components/section-header/s
     ],
     templateUrl: './services.html'
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit, OnDestroy {
     /**
      * Servicios principales detallados
      */
@@ -128,4 +128,133 @@ export class ServicesComponent {
             answer: 'services_faq_4_answer'
         }
     ];
+
+    cards = [
+        {
+        icon: '✈️', // Replace with actual icon or SVG
+        title: 'Airport Transfers',
+        description: 'Professional and punctual transfers to Ezeiza and Aeroparque airports. Door-to-door service with flight tracking.',
+        bullets: [
+            '24/7 availability',
+            'Flight tracking included',
+            'Meet & Greet service',
+            'Up to 4 passengers + luggage'
+        ],
+        price: 'ARS 40.000',
+        button: 'Book Now'
+        },
+        {
+        icon: '📍',
+        title: 'City Tours',
+        description: 'Explore Buenos Aires with our personalized guided tours. Visit the most iconic neighborhoods and landmarks.',
+        bullets: [
+            'Bilingual professional guides',
+            'Customizable itineraries',
+            '4-8 hour durations',
+            'Small group options'
+        ],
+        price: 'ARS 25.000',
+        button: 'Book Now'
+        },
+        {
+        icon: '💼',
+        title: 'Servicios Corporativos',
+        description: 'Servicio profesional para empresas y ejecutivos.',
+        bullets: [
+            'Priority booking',
+            'Monthly invoicing',
+            'Dedicated account manager',
+            'Volume discounts'
+        ],
+        price: null,
+        button: 'Request Quote'
+        }
+    ];
+
+    // Carousel properties
+    servicesForCarousel: any[] = [];
+    navigationDots: number[] = [];
+    currentSlide = 0;
+    carouselTransform = 0;
+    private autoScrollInterval: any;
+    private isHovered = false;
+
+    ngOnInit() {
+        // Duplicate services for infinite scroll effect
+        this.servicesForCarousel = [...this.services, ...this.services];
+        
+        // Calculate number of navigation dots (6 services / 3 per view = 2 slides, but we show 4 for smooth scrolling)
+        const totalSlides = Math.ceil(this.services.length / 3);
+        this.navigationDots = Array(totalSlides).fill(0).map((_, i) => i);
+        
+        this.startAutoScroll();
+    }
+
+    ngOnDestroy() {
+        this.stopAutoScroll();
+    }
+
+    /**
+     * Start automatic carousel scrolling
+     */
+    startAutoScroll() {
+        this.autoScrollInterval = setInterval(() => {
+            if (!this.isHovered) {
+                this.nextSlide();
+            }
+        }, 5000); // 5 seconds interval for smooth, not fast scrolling
+    }
+
+    /**
+     * Stop automatic scrolling
+     */
+    stopAutoScroll() {
+        if (this.autoScrollInterval) {
+            clearInterval(this.autoScrollInterval);
+        }
+    }
+
+    /**
+     * Pause carousel on hover
+     */
+    pauseCarousel() {
+        this.isHovered = true;
+    }
+
+    /**
+     * Resume carousel when mouse leaves
+     */
+    resumeCarousel() {
+        this.isHovered = false;
+    }
+
+    /**
+     * Move to next slide
+     */
+    nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.navigationDots.length;
+        this.updateCarouselPosition();
+    }
+
+    /**
+     * Go to specific slide
+     */
+    goToSlide(index: number) {
+        this.currentSlide = index;
+        this.updateCarouselPosition();
+    }
+
+    /**
+     * Update carousel transform position
+     */
+    updateCarouselPosition() {
+        // Calculate the width of one card including gap
+        // Each card is 1/3 of container width, gap is 24px (6 * 4px)
+        const cardWidthPercentage = 100 / 3;
+        const gapInPixels = 24;
+        
+        // Transform based on current slide
+        // We use percentage for responsive design
+        this.carouselTransform = -(this.currentSlide * (cardWidthPercentage + 2)); // 2% accounts for gap
+    }
 }

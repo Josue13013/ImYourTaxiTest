@@ -5,41 +5,50 @@
             [centerText]="true" variant="light" />
     </section>
 
-    <!-- Services Grid -->
-    <section class="mb-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-            <div *ngFor="let service of services" class="group bg-primary-900/20 border-2 border-primary-500/30 rounded-3xl p-8 md:p-10 transition-all duration-300
-                        hover:-translate-y-2 hover:border-primary-500/60 hover:shadow-2xl hover:shadow-primary-500/20">
+    
+<!-- Services Carousel -->
+    <section class="mb-24 overflow-hidden">
+        <div class="relative">
+            <!-- Carousel Container -->
+            <div class="carousel-container overflow-hidden">
+                <div 
+                    class="carousel-track flex gap-6 animate-[scroll_40s_linear_infinite] hover:[animation-play-state:paused]"
+                    >
+                    
+                    <div *ngFor="let service of servicesForCarousel" 
+                        class="carousel-card flex-shrink-0 group bg-primary-900/20 border-4 border-dashed border-primary-500/30 rounded-3xl p-8 md:p-10 transition-all duration-300 hover:scale-110 hover:border-primary-500/60 hover:shadow-2xl hover:shadow-primary-500/30 hover:z-10"
+                        style="width: calc((100% - 48px) / 3);">
 
-                <div class="w-[70px] h-[70px] rounded-2xl bg-gradient-to-br from-primary-500/20 to-[#E8D5B5]/20 
-                            flex items-center justify-center mb-6 shadow-inner border border-white/5">
-                    <i [class]="service.icon + ' text-3xl text-primary-300'"></i>
+                        <div class="w-[70px] h-[70px] rounded-2xl bg-gradient-to-br from-primary-500/20 to-[#E8D5B5]/20 
+                                    flex items-center justify-center mb-6 shadow-inner border border-white/5">
+                            <i [class]="service.icon + ' text-3xl text-primary-300'"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-white mb-4">{{ service.title | translate }}</h3>
+
+                        <p class="text-[15px] leading-relaxed text-text-secondary mb-6 h-auto min-h-[48px]">
+                            {{ service.description | translate }}
+                        </p>
+
+                        <ul class="space-y-3 mb-8">
+                            <li *ngFor="let feature of service.features" class="flex items-start gap-3 text-sm text-text-muted">
+                                <i class="pi pi-check-circle text-primary-300 text-base mt-0.5 flex-shrink-0"></i>
+                                <span>{{ feature | translate }}</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex flex-col gap-1 mb-6 pt-6 border-t border-primary-500/20" *ngIf="service.price">
+                            <span class="text-xs text-text-muted uppercase tracking-wider">{{ 'services_from' | translate }}</span>
+                            <span class="text-3xl font-bold text-primary-300">{{ service.currency }} {{ service.price }}</span>
+                        </div>
+
+                        <button class="w-full py-4 bg-gradient-to-br from-[#5BA3D0] to-[#4A8AB8] text-white rounded-xl 
+                                       font-semibold text-[15px] shadow-lg shadow-primary-500/20 transition-all duration-300 
+                                       hover:scale-[1.02] hover:shadow-xl hover:shadow-primary-500/40 active:scale-[0.98]">
+                            {{ service.cta | translate }}
+                        </button>
+                    </div>
                 </div>
-
-                <h3 class="text-2xl font-bold text-white mb-4">{{ service.title | translate }}</h3>
-
-                <p class="text-[15px] leading-relaxed text-text-secondary mb-6 h-auto min-h-[48px]">
-                    {{ service.description | translate }}
-                </p>
-
-                <ul class="space-y-3 mb-8">
-                    <li *ngFor="let feature of service.features" class="flex items-start gap-3 text-sm text-text-muted">
-                        <i class="pi pi-check-circle text-primary-300 text-base mt-0.5 flex-shrink-0"></i>
-                        <span>{{ feature | translate }}</span>
-                    </li>
-                </ul>
-
-                <div class="flex flex-col gap-1 mb-6 pt-6 border-t border-primary-500/20" *ngIf="service.price">
-                    <span class="text-xs text-text-muted uppercase tracking-wider">{{ 'services_from' | translate
-                        }}</span>
-                    <span class="text-3xl font-bold text-primary-300">{{ service.currency }} {{ service.price }}</span>
-                </div>
-
-                <button class="w-full py-4 bg-gradient-to-br from-[#5BA3D0] to-[#4A8AB8] text-white rounded-xl 
-                               font-semibold text-[15px] shadow-lg shadow-primary-500/20 transition-all duration-300 
-                               hover:scale-[1.02] hover:shadow-xl hover:shadow-primary-500/40 active:scale-[0.98]">
-                    {{ service.cta | translate }}
-                </button>
             </div>
         </div>
     </section>

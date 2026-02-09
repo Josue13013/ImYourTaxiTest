@@ -49,7 +49,7 @@ export class PlacesListComponent implements OnInit, OnDestroy {
       description: 'places_colon_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1542178243-bc20204b769f?w=800',
+      image: 'https://static.vecteezy.com/system/resources/previews/011/881/270/large_2x/buenos-aires-argentina-september-04-2022-obelisk-of-buenos-aires-el-obelisco-a-national-historic-monument-located-at-republic-square-plaza-de-la-republica-free-photo.jpg',
       title: 'places_obelisco_title',
       location: 'Avenida 9 de Julio, Buenos Aires',
       description: 'places_obelisco_description'
