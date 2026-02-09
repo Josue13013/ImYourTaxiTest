@@ -19,10 +19,10 @@ export class TaxibusSectionComponent implements AfterViewInit {
     @ViewChild('ctaButton') ctaButton!: ElementRef;
 
     features = [
-        { icon: 'pi pi-users', text: 'taxibus_capacity' },
-        { icon: 'pi pi-shield', text: 'taxibus_safety' },
-        { icon: 'pi pi-dollar', text: 'taxibus_price' },
-        { icon: 'pi pi-clock', text: 'taxibus_schedule' }
+        { icon: 'fa-solid fa-users', text: 'taxibus_capacity' },
+        { icon: 'fa-solid fa-shield', text: 'taxibus_safety' },
+        { icon: 'fa-solid fa-dollar', text: 'taxibus_price' },
+        { icon: 'fa-solid fa-clock', text: 'taxibus_schedule' }
     ];
 
     ngAfterViewInit() {

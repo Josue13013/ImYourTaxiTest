@@ -45,18 +45,18 @@ export class FooterComponent {
    * Redes sociales
    */
   socialLinks = [
-    { icon: 'pi pi-facebook', url: 'https://facebook.com', label: 'Facebook' },
-    { icon: 'pi pi-instagram', url: 'https://instagram.com', label: 'Instagram' },
-    { icon: 'pi pi-twitter', url: 'https://twitter.com', label: 'Twitter' },
-    { icon: 'pi pi-whatsapp', url: 'https://wa.me/5491112345678', label: 'WhatsApp' }
+    { icon: 'fa-brands fa-facebook', url: 'https://facebook.com', label: 'Facebook' },
+    { icon: 'fa-brands fa-instagram', url: 'https://instagram.com', label: 'Instagram' },
+    { icon: 'fa-brands fa-twitter', url: 'https://twitter.com', label: 'Twitter' },
+    { icon: 'fa-brands fa-whatsapp', url: 'https://wa.me/5491112345678', label: 'WhatsApp' }
   ];
 
   /**
    * Información de contacto
    */
   contactInfo = [
-    { icon: 'pi pi-phone', text: '+54 9 11 1234-5678' },
-    { icon: 'pi pi-envelope', text: 'info@soytutaxi.com' },
-    { icon: 'pi pi-map-marker', text: 'Buenos Aires, Argentina' }
+    { icon: 'fa-solid fa-phone', text: '+54 9 11 1234-5678' },
+    { icon: 'fa-solid fa-envelope', text: 'info@soytutaxi.com' },
+    { icon: 'fa-solid fa-map-marker', text: 'Buenos Aires, Argentina' }
   ];
 }

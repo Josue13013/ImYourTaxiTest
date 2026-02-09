@@ -22,7 +22,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
      */
     services = [
         {
-            icon: 'pi pi-send',
+            icon: 'fa-solid fa-paper-plane',
             title: 'services_airport_title',
             description: 'services_airport_description',
             features: [
@@ -36,7 +36,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
             cta: 'services_book_now'
         },
         {
-            icon: 'pi pi-map',
+            icon: 'fa-solid fa-map',
             title: 'services_tours_title',
             description: 'services_tours_description',
             features: [
@@ -50,7 +50,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
             cta: 'services_book_now'
         },
         {
-            icon: 'pi pi-briefcase',
+            icon: 'fa-solid fa-briefcase',
             title: 'services_corporate_title',
             description: 'services_corporate_description',
             features: [
@@ -64,7 +64,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
             cta: 'services_request_quote'
         },
         {
-            icon: 'pi pi-users',
+            icon: 'fa-solid fa-users',
             title: 'services_groups_title',
             description: 'services_groups_description',
             features: [
@@ -78,7 +78,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
             cta: 'services_request_quote'
         },
         {
-            icon: 'pi pi-calendar',
+            icon: 'fa-solid fa-calendar',
             title: 'services_scheduled_title',
             description: 'services_scheduled_description',
             features: [
@@ -92,7 +92,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
             cta: 'services_book_now'
         },
         {
-            icon: 'pi pi-star',
+            icon: 'fa-solid fa-star',
             title: 'services_vip_title',
             description: 'services_vip_description',
             features: [
@@ -131,7 +131,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
 
     cards = [
         {
-        icon: '✈️', // Replace with actual icon or SVG
+        icon: 'fa-solid fa-car', // Replace with actual icon or SVG
         title: 'Airport Transfers',
         description: 'Professional and punctual transfers to Ezeiza and Aeroparque airports. Door-to-door service with flight tracking.',
         bullets: [
@@ -144,7 +144,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
         button: 'Book Now'
         },
         {
-        icon: '📍',
+        icon: 'fa-solid fa-map-marker',
         title: 'City Tours',
         description: 'Explore Buenos Aires with our personalized guided tours. Visit the most iconic neighborhoods and landmarks.',
         bullets: [
@@ -157,7 +157,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
         button: 'Book Now'
         },
         {
-        icon: '💼',
+        icon: 'fa-solid fa-briefcase',
         title: 'Servicios Corporativos',
         description: 'Servicio profesional para empresas y ejecutivos.',
         bullets: [

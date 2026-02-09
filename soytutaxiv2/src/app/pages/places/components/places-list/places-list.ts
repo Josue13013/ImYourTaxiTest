@@ -25,25 +25,25 @@ export class PlacesListComponent implements OnInit, OnDestroy {
 
   places = [
     {
-      image: 'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800',
+      image: 'https://palermoweb.com.ar/wp-content/uploads/2024/10/Palermo-Soho-1024x579.jpg',
       title: 'places_palermo_title',
       location: 'Palermo, Buenos Aires',
       description: 'places_palermo_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1589802829985-817e51171b92?w=800',
+      image: 'https://thumbs.dreamstime.com/z/buenos-aires-argentina-june-newly-renovated-retiro-train-station-newly-renovated-retiro-train-station-156611027.jpg',
       title: 'places_retiro_title',
       location: 'Retiro, Buenos Aires',
       description: 'places_retiro_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=800',
+      image: 'https://cache.quantocustaviajar.com/blog/wp-content/uploads/2018/06/Puerto_decima_Deensel-1920x1483.jpg',
       title: 'places_puerto_madero_title',
       location: 'Puerto Madero, Buenos Aires',
       description: 'places_puerto_madero_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1580655653885-65763b2597d0?w=800',
+      image: 'https://teatrocolon.org.ar/wp-content/uploads/2023/11/frente-teatro-colon.jpeg',
       title: 'places_colon_title',
       location: 'Centro, Buenos Aires',
       description: 'places_colon_description'
@@ -55,43 +55,43 @@ export class PlacesListComponent implements OnInit, OnDestroy {
       description: 'places_obelisco_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800',
+      image: 'https://elobjetivo.com.ar/download/multimedia.normal.8e515acf0edb3aba.496e746572696f7243617361526f7361646130303031375f6e6f726d616c2e6a7067.jpg',
       title: 'places_casa_rosada_title',
       location: 'Plaza de Mayo, Buenos Aires',
       description: 'places_casa_rosada_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
+      image: 'https://turismo.buenosaires.gob.ar/sites/turismo/files/cementerio-recoleta-pasillo-interno-1500x610-nn_0.jpg',
       title: 'places_recoleta_title',
       location: 'Recoleta, Buenos Aires',
       description: 'places_recoleta_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800',
+      image: 'https://www.omundoeseu.com.br/wp-content/uploads/2022/11/caminito-in-la-boca-neighborhood-buenos-aires-argentina-a-beautiful-colorful-travel-destination.jpg',
       title: 'places_caminito_title',
       location: 'La Boca, Buenos Aires',
       description: 'places_caminito_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1590073844006-33379778ae09?w=800',
+      image: 'https://solsalute.com/wp-content/uploads/2022/05/Depositphotos_445366550_S-1-768x512.jpg',
       title: 'places_san_telmo_title',
       location: 'San Telmo, Buenos Aires',
       description: 'places_san_telmo_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800',
+      image: 'https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2023/05/02052513/Botanical-Gardens.jpg',
       title: 'places_jardin_botanico_title',
       location: 'Palermo, Buenos Aires',
       description: 'places_jardin_botanico_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1577083552792-a0d461cb1dd6?w=800',
+      image: 'https://media.cntraveler.com/photos/5afdcdf214fc2e4005aaead6/16:9/w_2560,c_limit/Museo-de-Arte-Latinoamericano-de-Buenos-Aires-Malba-(MALBA)_GettyImages-875493478.jpg?mbid=social_retweet',
       title: 'places_malba_title',
       location: 'Palermo, Buenos Aires',
       description: 'places_malba_description'
     },
     {
-      image: 'https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800',
+      image: 'https://turismo.buenosaires.gob.ar/sites/turismo/files/planetario_noche_1200.jpg',
       title: 'places_planetario_title',
       location: 'Palermo, Buenos Aires',
       description: 'places_planetario_description'
