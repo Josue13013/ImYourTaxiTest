@@ -1,5 +1,4 @@
 [build]
-  base = "."
   command = "ng build"
   publish = "dist/soytutaxiv2/browser"
 
