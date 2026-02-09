@@ -25,19 +25,19 @@ import { ContactFormComponent } from './components/contact-form/contact-form';
 export class ContactComponent {
   contactCards = [
     {
-      icon: 'pi pi-phone',
+      icon: 'fa-solid fa-phone',
       title: 'contact_phone_title',
       info: '+54 9 11 1234-5678',
       linkUrl: 'tel:+5491112345678'
     },
     {
-      icon: 'pi pi-envelope',
+      icon: 'fa-solid fa-envelope',
       title: 'contact_email_title',
       info: 'info@soytutaxi.com',
       linkUrl: 'mailto:info@soytutaxi.com'
     },
     {
-      icon: 'pi pi-map-marker',
+      icon: 'fa-solid fa-map-marker',
       title: 'contact_location_title',
       info: 'Buenos Aires, Argentina'
     }

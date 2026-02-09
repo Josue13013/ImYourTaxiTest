@@ -123,4 +123,6 @@ export class CardComponent {
    * Obtener URL de imagen (usa image o imageUrl)
    */
   finalImageUrl = computed(() => this.image() || this.imageUrl());
+
+  
 }

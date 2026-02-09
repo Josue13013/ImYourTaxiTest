@@ -20,22 +20,22 @@ export class ServicesSectionComponent implements AfterViewInit {
 
     services = [
         {
-            icon: 'pi pi-send',
+            icon: 'fa-solid fa-plane',
             title: 'services_airports_title',
             description: 'services_airports_description'
         },
         {
-            icon: 'pi pi-users',
+            icon: 'fa-solid fa-users',
             title: 'services_groups_title',
             description: 'services_groups_description'
         },
         {
-            icon: 'pi pi-briefcase',
+            icon: 'fa-solid fa-briefcase',
             title: 'services_corporate_title',
             description: 'services_corporate_description'
         },
         {
-            icon: 'pi pi-calendar',
+            icon: 'fa-solid fa-calendar',
             title: 'services_scheduled_title',
             description: 'services_scheduled_description'
         }
